@@ -1,0 +1,38 @@
+version: "3"
+
+services:
+  app-python:
+    container_name: app-python
+    build: src-flask
+    restart: unless-stopped
+    ports:
+      - 8000:8000
+    links: 
+      - db-pg
+    volumes:
+      - ./src-flask:/var/app
+
+  app-node:
+    container_name: app-node
+    build: src-node
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    links: 
+      - db-pg
+    volumes:
+      - ./src-node:/var/app
+
+  db-pg:
+    container_name: db-pg
+    image: postgres:11.4
+    restart: unless-stopped
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: dbuser
+      PG_PASSWORD: dbpass
+      PGDATA: /var/pg/data
+      TZ: "America/Lima"
+    volumes:
+      - ./local_db/pgdata:/var/pg/data

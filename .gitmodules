@@ -1,0 +1,6 @@
+[submodule "src-node"]
+	path = src-node
+	url = https://github.com/codigonet/docker-node-demo
+[submodule "src-flask"]
+	path = src-flask
+	url = https://github.com/codigonet/docker-python-demo
