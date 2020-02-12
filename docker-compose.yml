@@ -36,3 +36,15 @@ services:
       TZ: "America/Lima"
     volumes:
       - ./local_db/pgdata:/var/pg/data
+
+  db-dyn:
+    container_name: db-dyn
+    build: src-dynamo
+    restart: unless-stopped
+    ports:
+      - 8100:8000
+    environment:
+      TZ: "America/Lima"
+    volumes:
+      - ./local_db/dyndata:/var/dyndata
+    command: -jar DynamoDBLocal.jar -dbPath /var/dyndata -delayTransientStatuses -sharedDb

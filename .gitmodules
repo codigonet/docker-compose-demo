@@ -4,3 +4,6 @@
 [submodule "src-flask"]
 	path = src-flask
 	url = https://github.com/codigonet/docker-python-demo
+[submodule "src-dynamo"]
+	path = src-dynamo
+	url = https://github.com/codigonet/docker-dynamodb-demo
