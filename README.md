@@ -13,7 +13,17 @@ git submodule add https://github.com/codigonet/docker-node-demo src-node
 git submodule add https://github.com/codigonet/docker-python-demo src-flask
 ```
 
+- Agregar Submodulo DynamoDB
+```
+git submodule add https://github.com/codigonet/docker-dynamodb-demo src-dynamo
+```
+
 ## Para actualizar submodulos existentes
+
+- Inicializar y actualizar Submodulos
+```
+git submodule update --init --recursive
+```
 
 - Actualizar Submodulo Node
 ```
