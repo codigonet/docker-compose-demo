@@ -1,6 +1,8 @@
 # docker-compose-demo
 Ejemplo simple de aplicaciones agrupadas sobre entorno Docker Compose, usando submodulos GIT
 
+![Docker Compose + Submódulos GIT](docker-compose.png)
+
 ## Para agregar submodulos
 
 - Agregar Submodulo Node
