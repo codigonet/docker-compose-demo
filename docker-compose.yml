@@ -33,7 +33,7 @@ services:
       POSTGRES_USER: dbuser
       PG_PASSWORD: dbpass
       PGDATA: /var/pg/data
-      TZ: "America/Lima"
+      TZ: "America/Santiago"
     volumes:
       - ./local_db/pgdata:/var/pg/data
 
@@ -44,7 +44,7 @@ services:
     ports:
       - 8100:8000
     environment:
-      TZ: "America/Lima"
+      TZ: "America/Santiago"
     volumes:
       - ./local_db/dyndata:/var/dyndata
     command: -jar DynamoDBLocal.jar -dbPath /var/dyndata -delayTransientStatuses -sharedDb
